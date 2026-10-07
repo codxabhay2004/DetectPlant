@@ -17,11 +17,6 @@ subprojects {
 }
 subprojects {
     project.evaluationDependsOn(":app")
-    plugins.withId("org.jetbrains.kotlin.android") {
-        extensions.configure<org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension> {
-            jvmToolchain(17)
-        }
-    }
 }
 
 tasks.register<Delete>("clean") {
