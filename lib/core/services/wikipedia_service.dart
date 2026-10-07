@@ -14,11 +14,12 @@ class WikipediaService {
   };
 
   /// Clean up model labels for API lookup:
+  /// - Handles compound labels, e.g. "Tomato_Early_blight" -> "Tomato Early Blight"
   /// - Strip parenthetical text, e.g. "African Violet (Saintpaulia ionantha)" -> "African Violet"
-  /// - Replace underscores with spaces, e.g. "Money_Plant" -> "Money Plant"
+  /// - Replace underscores with spaces
   String _cleanLabel(String raw) {
     var cleaned = raw.replaceAll(RegExp(r'\s*\(.*?\)\s*'), ' ').trim();
-    cleaned = cleaned.replaceAll('_', ' ').trim();
+    cleaned = cleaned.replaceAll('___', ' ').replaceAll('__', ' ').replaceAll('_', ' ').trim();
     return cleaned;
   }
 

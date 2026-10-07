@@ -77,9 +77,20 @@ class _ResultScreenState extends ConsumerState<ResultScreen> {
     return 'Low Risk';
   }
 
+  String _formatLabel(String raw) {
+    // Replaces triple/double underscores with ' — ' and single underscores with spaces
+    var formatted = raw
+        .replaceAll('___', ' — ')
+        .replaceAll('__', ' — ')
+        .replaceAll('_', ' ')
+        .trim();
+    return formatted;
+  }
+
   @override
   Widget build(BuildContext context) {
-    final label = widget.inferenceResult['plant'] as String? ?? 'Unknown';
+    final rawLabel = widget.inferenceResult['plant'] as String? ?? 'Unknown';
+    final label = _formatLabel(rawLabel);
     final confidence = widget.inferenceResult['confidence'] as double? ?? 0.0;
     final confPercent = (confidence * 100).toStringAsFixed(1);
 

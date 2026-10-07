@@ -158,14 +158,17 @@ class TFLiteService {
         _diseaseLabels!,
         input,
       );
+      final rawLabel = result['label'] as String;
+      final isHealthy = rawLabel.toLowerCase().contains('healthy');
+
       print(
-        'Disease: ${result['label']} (${((result['confidence'] as double) * 100).toStringAsFixed(1)}%)',
+        'Disease: $rawLabel (${((result['confidence'] as double) * 100).toStringAsFixed(1)}%)',
       );
       return {
-        'plant': result['label'],
-        'disease': result['label'],
+        'plant': rawLabel,
+        'disease': isHealthy ? null : rawLabel,
         'confidence': result['confidence'],
-        'isHealthy': false,
+        'isHealthy': isHealthy,
         'mode': 'disease',
       };
     } catch (e) {
