@@ -316,6 +316,4 @@ Switching languages in the settings immediately updates UI strings, formatted he
 
 ---
 
-## 📜 License
 
-Distributed under the **MIT License**. See `LICENSE` for more information.
