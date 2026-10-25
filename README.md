@@ -3,7 +3,7 @@
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=for-the-badge&logo=flutter&logoColor=white)](https://flutter.dev/)
 [![TensorFlow Lite](https://img.shields.io/badge/TensorFlow_Lite-2.x-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)](https://www.tensorflow.org/lite)
 [![Architecture](https://img.shields.io/badge/Architecture-Feature--First_%2B_Riverpod-blueviolet?style=for-the-badge)](https://riverpod.dev/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+
 
 **DetectPlant** is a high-performance, offline-first mobile application built with Flutter that puts botanical identification and agronomic diagnosis directly into farmers', agronomists', and gardening enthusiasts' hands. Powered by dual lightweight **EfficientNetB0 INT8-quantized TensorFlow Lite** models, the app delivers accurate real-time inference on-device without requiring an internet connection.
 
