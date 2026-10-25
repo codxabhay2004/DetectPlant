@@ -102,11 +102,9 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 5. Open a Pull Request
 
 ---
-
 ## 📜 License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
 ---
 
-*Developed by Vishwaraj-636*
